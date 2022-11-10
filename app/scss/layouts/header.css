@@ -1,0 +1,30 @@
+header {
+  background: linear-gradient(to left, lightcoral, lightgoldenrodyellow, lightseagreen);
+  display: flex;
+  padding: 10px 20px;
+  transition: background-color 1s;
+}
+header:hover {
+  background-color: lightcoral;
+}
+@media (max-width: 600px) {
+  header {
+    background-color: lightgoldenrodyellow;
+  }
+  header a {
+    color: black;
+  }
+}
+header > a {
+  text-transform: uppercase;
+}
+header nav {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+}/*# sourceMappingURL=header.css.map */

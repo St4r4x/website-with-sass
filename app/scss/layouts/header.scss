@@ -1,0 +1,38 @@
+@use "../utils/" as utils;
+
+header {
+  background: linear-gradient(
+    to left,
+    lightcoral,
+    lightgoldenrodyellow,
+    lightseagreen
+  );
+  display: flex;
+  padding: 10px 20px;
+  transition: background-color 1s;
+
+  &:hover {
+    background-color: lightcoral;
+  }
+  @include utils.only-on-mobile {
+    background-color: lightgoldenrodyellow;
+    a {
+      color: black;
+    }
+  }
+
+  //le & correspond à l'élément parent, ici header
+  & > a {
+    text-transform: uppercase;
+  }
+
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+
+    @include utils.only-on-mobile {
+      display: none;
+    }
+  }
+}

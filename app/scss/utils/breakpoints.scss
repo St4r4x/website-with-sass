@@ -1,0 +1,7 @@
+$breakpoint-sm: 600px;
+
+@mixin only-on-mobile {
+  @media (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
